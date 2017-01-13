@@ -1,0 +1,62 @@
+/* style dla menu scroll */
+
+@mixin menuScroll {
+    color: #0ed8d6;
+    transition: all 0.7s ease-in-out;
+}
+
+
+/*ustawienia głwne dla sekcji*/
+
+@mixin allSection {
+    width: 100%;
+    text-align: center;
+}
+
+
+/*wyśrodkowanie margines prawy i lewy*/
+
+@mixin marginLeftRight {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*wyśrodkowanie font*/
+
+@mixin positionFont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*wyśrodkowanie inny sposób*/
+
+@mixin positionCenter {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+
+/* placeholder font i kolor*/
+
+@mixin ColorAndFont {
+    font-family: 'Roboto Slab', serif;
+    color: #777777;
+}
+
+
+/* ustawienia dla obrazków*/
+
+@mixin positionImage {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

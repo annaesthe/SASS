@@ -1,0 +1,642 @@
+@import"mixin";
+@import"zmienne";
+
+/*
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Droid Serif', serif;
+*/
+
+body {
+    font-family: 'Roboto Slab', serif;
+    color: #777777;
+    /*         background-color: greenyellow;*/
+}
+
+.font-Italic {
+    font-family: 'Droid Serif', serif;
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* h1, h2, bez tych, ponieważ na projekcie są białe*/
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    margin: 0;
+}
+
+h3 {
+    padding-top: 140px;
+    padding-bottom: 24px;
+    font-size: 27px;
+}
+
+h4 {
+    padding-bottom: 22px;
+    font-weight: bold;
+}
+
+h5 {
+    padding-bottom: 12px;
+    font-weight: bold;
+}
+
+h6 {
+    padding-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.p-under-h3-h4-h5 {
+    color: #777;
+    margin: 0;
+    /*            font-size: 10px;*/
+}
+
+.fa {
+    color: #fff;
+}
+
+
+/*menu główne - start*/
+
+
+/* belka menu - start*/
+
+#main-nav {
+    background-color: transparent;
+    border: solid;
+    border-width: 0;
+}
+
+
+/* nadpisanie klasy - wielkoś, kolor, styl czcionki: dla Bootstrap Grid*/
+
+.navbar-default .navbar-brand {
+    font-size: 18px;
+    color: #fff;
+}
+
+
+/* nadpisanie klasy (focus, hover) dla Bootstrap Grid*/
+
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+
+/* nadpisanie klasy - wielkoś, kolor dla linków w menu głównym*/
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color: $colorMotywu;
+    //    background-color: transparent;
+}
+
+
+/* ustawienie obraka jako tła*/
+
+#main-header {
+    background-image: url(../img/header/pictures_on_the_wall.jpg);
+    @include positionImage;
+    height: 685px;
+    max-height: 100vh;
+}
+
+
+/* ustawienia dla nagłówka znajdującego się na obrazku*/
+
+#main-header .main-header-content {
+    font-weight: bold;
+    color: #fff;
+    @include positionCenter
+}
+
+
+/* nadanie rozmiaru czcionki dla h1*/
+
+#main-header h1 {
+    font-size: 42px;
+}
+
+
+/* nadanie rozmiaru czcionki dla h2*/
+
+#main-header h2 {
+    font-size: 24px;
+}
+
+
+/* nadpisanie klasy przycisku - z zaokrąglonch rogów robią się kwadratowe, nadanie odpowieniej szerokości i wysokości, wyeliminowanie border i padding*/
+
+.btn {
+    margin: 30px;
+    border: 0;
+    padding: 0;
+    /* po zmierzeniu przycisk powinien mieć zakomentotwane poniżej wymiary    */
+    /*    max-height: 60px;*/
+    max-height: 40px;
+    height: 100vh;
+    /* po zmierzeniu przycisk powinien mieć zakomentotwane poniżej wymiary    */
+    /*    max-width: 195px;*/
+    max-width: 135px;
+    width: 100vh;
+    /* taki rozmiar czcionki jest po zmierzeniu*/
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* nadpisanie klasy przycisku - zmiana koloru tła*/
+
+.btn-primary {
+    background-color: $colorMotywu;
+}
+
+
+/* nadpisanie focusi hover dla menu i przycisku - start*/
+
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary.active:hover,
+.btn-primary:active.focus,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.open>.dropdown-toggle.btn-primary.focus,
+.open>.dropdown-toggle.btn-primary:focus,
+.open>.dropdown-toggle.btn-primary:hover,
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary.active,
+.btn-primary:active,
+.open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: $colorMotywu;
+    border-color: $colorMotywu;
+    outline-color: transparent;
+    box-shadow: none;
+}
+
+
+/* nadpisanie przycisku menu - responsywność poniżej 768 - wyświetla się w tej samej lini co bootstrap grid, ale po prawej */
+
+.navbar-toggle {
+    position: fixed;
+    right: 0;
+    border: 0;
+    color: #fff;
+}
+
+
+/* nadpisanie przycisku menu - responsywność poniżej 768 - zniwelowanie białej lini*/
+
+.collapse {
+    border: 0;
+    box-shadow: none;
+}
+
+
+/* usunięcie białej lini między belką menu, a listą menu*/
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border: 0;
+    outline-width: 0;
+}
+
+
+/* nadpisanie pola z napisem Menu*/
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+
+/* style dla menu scroll - start*/
+
+#main-nav.scroll {
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+#main-nav.scroll .navbar-brand {
+    @include menuScroll;
+}
+
+#main-nav.scroll ul li a {
+    @include menuScroll;
+}
+
+#main-nav.scroll .navbar-toggle {
+    @include menuScroll;
+}
+
+//#main-nav.scroll .navbar-default .navbar-toggle:focus,
+//.navbar-default .navbar-toggle:active,
+//.navbar-default .navbar-toggle:hover {
+//    /*     background-color: lightgray; */
+//}
+
+
+/* style dla menu scroll - stop*/
+
+
+/*menu główne - stop*/
+
+
+/* sction services - start*/
+
+#service {
+    @include allSection;
+    min-height: 630px;
+}
+
+.container-service {
+    margin: 0px auto;
+    padding-top: 70px;
+}
+
+.smaller-container-service-circle {
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.service-circle {
+    height: 85px;
+    width: 85px;
+    background-color: $colorMotywu;
+    margin: 0 auto 25px;
+    @include positionFont;
+}
+
+
+/* sction services - stop*/
+
+
+/* sction portfolio - start */
+
+#portfolio {
+    width: 100%;
+    min-height: 1100px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+
+/* trzy portfoliwa w jednej lini*/
+
+.smaller-container-service-square {
+    height: auto;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+
+/* pojedyńcze portfolia 1, 2, 3, 4, 5, 6  dla obrazków*/
+
+.portfolio-square {
+    height: 230px;
+    width: 300px;
+    color: #fff;
+    margin: 0 12px;
+    @include positionFont;
+    @include marginLeftRight;
+}
+
+
+/* pojedyńcze portfolia 1, 2, 3, 4, 5, 6 dla treści*/
+
+.smaller-square {
+    width: 300px;
+    height: 87px;
+    background-color: #fff;
+    margin: 0 12px;
+    padding-top: 25px;
+    @include marginLeftRight;
+    margin-bottom: 25px;
+}
+
+
+/* nadpisanie paddnigu pochodzącego z .container-service */
+
+.smaller-padding {
+    padding-top: 25px;
+}
+
+
+/*ustawienia ogólne dla obrazków*/
+
+.all-img {
+    @include positionImage;
+}
+
+
+/* obrazek dla porfolio 1*/
+
+#portfolio-img-1 {
+    background-image: url(../img/portfolio/chestnut_on_bracket.jpg);
+    background-position: 50% 100%;
+}
+
+
+/* obrazek dla porfolio 2*/
+
+#portfolio-img-2 {
+    background-image: url(../img/portfolio/typing_on_laptop.jpg);
+}
+
+
+/* obrazek dla porfolio 3*/
+
+#portfolio-img-3 {
+    background-image: url(../img/portfolio/child_with_blue_paint.jpg);
+}
+
+
+/* obrazek dla porfolio 4*/
+
+#portfolio-img-4 {
+    background-image: url(../img/portfolio/chaotic_paint.jpg);
+    background-size: 180%;
+    background-position: 50% 60%;
+}
+
+
+/* obrazek dla porfolio 5*/
+
+#portfolio-img-5 {
+    background-image: url(../img/portfolio/house_with_blue_doors.jpg);
+}
+
+
+/* obrazek dla porfolio 6*/
+
+#portfolio-img-6 {
+    background-image: url(../img/portfolio/box_of_cookies.jpg);
+}
+
+
+/* podstawa do wyświetlenia dla hover*/
+
+.maska-portfolio {
+    width: 100%;
+    height: 100%;
+    /*    kolor tła całkowicie niewidoczny - 0 */
+    background-color: $colorMaskaPortfolioHover;
+    /*    font całkowicie niewidoczny*/
+    opacity: 0;
+    @include positionFont;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/*wyświetlenie hover*/
+
+.maska-portfolio:hover {
+    background-color: $colorMaskaPortfolioHover;
+    opacity: 1;
+}
+
+
+/* section portfolio - stop/
+/* section team - start*/
+
+#about-team {
+    @include allSection;
+    min-height: 800px;
+}
+
+.team-circle {
+    height: 200px;
+    width: 200px;
+    color: #fff;
+    margin: 0 auto;
+    @include positionFont;
+}
+
+#person-img-1 {
+    background-image: url(../img/team/man-1.jpg);
+    background-size: 250%;
+    background-position: 90% 20%;
+}
+
+#person-img-2 {
+    background-image: url(../img/team/man-2.jpg);
+    background-size: 400%;
+    background-position: 38% 10%;
+}
+
+#person-img-3 {
+    background-image: url(../img/team/woman-1.jpg);
+    background-size: 150%;
+    background-position: 70% 20%;
+}
+
+.smaller-square-under-circle {
+    width: 200px;
+    height: auto;
+    background-color: #fff;
+    margin: 0 auto;
+    padding-top: 30px;
+    margin-bottom: 14px;
+}
+
+.smaller-container-font-circle {
+    width: auto;
+    height: auto;
+    margin: 0;
+    display: inline-block;
+}
+
+.font-circle {
+    height: 37px;
+    width: 37px;
+    background-color: #222222;
+    color: #fff;
+    margin: 0 5px;
+    @include positionFont;
+}
+
+.font-circle:hover {
+    background-color: $colorMotywu;
+    transition: all 0.2s ease-in-out;
+}
+
+.text-under-team-picture {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+
+/* section team - stop*/
+
+
+/* section contact us - start*/
+
+#contact-us {
+    @include allSection;
+    min-height: 700px;
+    color: #fff;
+}
+
+.contact-us-background-image {
+    background: /* top, transparent black, faked with gradient */
+    linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* bottom, image */
+    url(../img/footer/world-map.jpg);
+    @include positionImage;
+}
+
+
+/* nadpisanie input-group-lg --> zmiana wysokości i dodanie marginesu*/
+
+.change-input-group-lg {
+    height: 54px;
+    margin-top: 2px;
+    margin-bottom: 24px;
+}
+
+.contact-us-form {
+    height: 100%;
+    margin-top: 0;
+    @include marginLeftRight;
+    margin-bottom: 0;
+}
+
+
+/* zmiana koloru z szarego na biały dla nagłówka */
+
+#contact-us .contact-us-text h3,
+p {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+
+/* zmiana koloru z szarego na biały dla opisu ponieżej nagłóka */
+
+.comtact-us-p-under-h3-h4-h5 {
+    color: #fff;
+    margin-bottom: 70px;
+    font-size: 12px;
+}
+
+
+/*nadpisanie oryginalnego .form-control*/
+
+
+/* nadpisanie danych dla przycisku SEND*/
+
+.form-control-button {
+    background-color: #0ed8d6;
+    color: #fff;
+    width: 200px;
+    height: 60px;
+    @include marginLeftRight;
+    border: 0;
+}
+
+
+/* dodanie wysokości dla message*/
+
+.height-message {
+    height: 202px;
+    margin-bottom: 24px;
+}
+
+
+/* dodanie szerokości do przycisku SEND*/
+
+.button-send {
+    width: 200px;
+    @include marginLeftRight;
+}
+
+
+/* wyśrodkowanie input dla placeholder name, email, phone, message oraz przyciku SEND*/
+
+.input-center {
+    @include marginLeftRight;
+}
+
+textarea.form-control {
+    height: 100%;
+}
+
+
+/* nadpisanie .form-control:focus*/
+
+.form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+/*trzeba konkretnie podać ściężkę, ponieważ bootstrap ma swoje zedfiniowane*/
+
+.input-group-lg>input.form-control::-webkit-input-placeholder {
+    @include ColorAndFont;
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+.height-message>textarea.form-control::-webkit-input-placeholder {
+    @include ColorAndFont;
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+
+/* section contact us - stop*/
+
+
+/* section footer - start*/
+
+#footer {
+    @include allSection;
+    margin-top: 15px;
+}
+
+.footer-all {
+    height: 100%;
+}
+
+.footer-sentence-left-right {
+    padding-top: 10px;
+}
+
+#footer p {
+    color: #777777;
+    margin: 0 auto 10px;
+}
+
+font_circle_media_768 {
+    height: 22px;
+    width: 22px;
+}
+
+
+/* section footer - stop*/
