@@ -2,29 +2,361 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SASS and GULP</title>
+    <meta name="viewport" content="width=device-width, inital-scale=1">
     
-<!--    STYLE -->
-    <link rel="stylesheet" href="css/styles.css">
-    </head>
+    <title>Bootstrap Portfolio Grid</title>
     
+<!-- Skrypt bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+<!-- Google fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i|Montserrat:400,700|Roboto+Slab:100,300,400,700" rel="stylesheet"> 
+
+<!-- Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    
+<!-- Main styles -->
+   <link rel="stylesheet" href="css/style.css">
+    
+    
+</head>
 <body>
+ 
+<!--  NAVIGATION BAR -->
   
-   <ul>
-       <li>Ania</li>
-       <li>Kasia</li>
-       <li>Asia</li>
-       <li>Klaudia</li>
-       <li>Juri</li>
-       <li>Rafał</li>
-       <li>Lucyna</li>
-       <li>Roman</li>
-       <li>Paweł</li>
-       <li>Piotrek</li>
-       <li>Anita</li>
-   </ul>
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" id="main-nav">
+  <div class="container">
+   
+    <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+        </button>
+        
+        <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+    </div>
     
-<!-- JS -->
-<script src="js/main.js"></script>
+    
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           <ul class="nav navbar-nav navbar-right">
+          
+            <li class="hidden">
+            <a href="#page-top"></a>
+            </li>
+            
+            <li>
+                <a class="page-scroll text-uppercase" href="#services">Services</a>
+            </li>
+            <li>
+                <a class="page-scroll text-uppercase" href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+                <a class="page-scroll text-uppercase" href="#team">Team</a>
+            </li>
+            <li>
+                <a class="page-scroll text-uppercase" href="#contact">Contact</a>
+            </li>
+            
+          </ul>
+         </div>
+       </div>
+</nav>
+
+
+<!-- Header --> 
+  <header id="main-header">
+      <div class="main-header-content container-fluid">
+       
+        <h3>Nam libero tempore, cum soluta</h3>
+        <h1>LOREM IPSUM DOLOR</h1>
+        <button>VIEW MORE</button>
+        
+      </div>
+   </header>
+  
+
+  <!-- SECTION SERVICES-->
+   <section id="services">
+          <div class="container">
+          <div class="row">
+             
+               <h2>Services</h2>
+               <p>Praesentium voluptatum delenti atque corrupti</p>
+               
+           </div>
+          
+           <div id="service-icons" class="row">
+          
+               <figure class="col-md-4 col-xs-12">
+                   <i class="fa fa-suitcase round" aria-hidden="true"></i>
+                   <h4>Web Development</h4>
+                   <p>Comque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis</p>
+               </figure>
+           
+                <figure class="col-md-4 col-xs-12">
+                   <i class="fa fa-cloud-download round" aria-hidden="true"></i>
+                   <h4>E-Commerce</h4>
+                   <p>Comque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis</p>
+               </figure>
+           
+               <figure class="col-md-4 col-xs-12">
+                   <i class="fa fa-comment round" aria-hidden="true"></i>
+                   <h4>Web Design</h4>
+                   <p>Comque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis</p>
+               </figure>
+
+           </div>
+       
+    </div>
+
+   </section>
+   
+   
+<!--   PORTFOLIO  -->
+   
+<section id="portfolio">
+		<div class="container">	
+			<div class="row">
+				<h2>PORTFOLIO</h2>
+				<p>Praesentium voluptatum delenti atque corrupti</p>
+			</div>
+           
+			<div class="row">
+					<div class="single-portfolio-item col-xs-12 col-md-4 col-sm-6">
+						<div id="portfolio-img1" class="single-portfolio-img">
+							<a href="">
+								<div class="single-portfolio-img-mask">
+									<i class="fa fa-plus" aria-hidden="true"></i> </div>
+							</a>
+						</div>
+						<div class="single-portfolio-opis">
+							<h5>Earum Rerum Hic</h5>
+							<p>Temporius Autem Quibusdam</p>
+						</div>
+
+					</div>
+
+					<div class="single-portfolio-item col-xs-12 col-md-4 col-sm-6">
+						<div id="portfolio-img2" class="single-portfolio-img">
+							<a href="">
+								<div class="single-portfolio-img-mask">
+									<i class="fa fa-plus" aria-hidden="true"></i> </div>
+							</a>
+						</div>
+						<div class="single-portfolio-opis">
+							<h5>Earum Rerum Hic</h5>
+							<p>Temporius Autem Quibusdam</p>
+						</div>
+
+					</div>
+
+					<div class="single-portfolio-item col-xs-12 col-md-4 col-sm-6">
+						<div id="portfolio-img3" class="single-portfolio-img">
+							<a href="">
+								<div class="single-portfolio-img-mask">
+									<i class="fa fa-plus" aria-hidden="true"></i> </div>
+							</a>
+						</div>
+						<div class="single-portfolio-opis">
+							<h5>Earum Rerum Hic</h5>
+							<p>Temporius Autem Quibusdam</p>
+						</div>
+
+					</div>
+
+					<div class="single-portfolio-item col-xs-12 col-md-4 col-sm-6">
+						<div id="portfolio-img4" class="single-portfolio-img">
+							<a href="">
+								<div class="single-portfolio-img-mask">
+									<i class="fa fa-plus" aria-hidden="true"></i> </div>
+							</a>
+						</div>
+						<div class="single-portfolio-opis">
+							<h5>Earum Rerum Hic</h5>
+							<p>Temporius Autem Quibusdam</p>
+						</div>
+					</div>
+
+					<div class="single-portfolio-item col-xs-12 col-md-4 col-sm-6">
+						<div id="portfolio-img5" class="single-portfolio-img">
+							<a href="">
+								<div class="single-portfolio-img-mask">
+									<i class="fa fa-plus" aria-hidden="true"></i>
+								</div>
+							</a>
+						</div>
+						<div class="single-portfolio-opis">
+							<h5>Earum Rerum Hic</h5>
+							<p>Temporius Autem Quibusdam</p>
+						</div>
+					</div>
+
+					<div class="single-portfolio-item col-xs-12 col-md-4 col-sm-6">
+						<div id="portfolio-img6" class="single-portfolio-img">
+							<a href="">
+								<div class="single-portfolio-img-mask">
+									<i class="fa fa-plus" aria-hidden="true"></i> </div>
+							</a>
+						</div>
+						<div class="single-portfolio-opis">
+							<h5>Earum Rerum Hic</h5>
+							<p>Temporius Autem Quibusdam</p>
+						</div>
+					</div>
+					
+				</div>
+      </div>
+</section>
+    
+    
+<!-- Section Team -->
+
+	<section id="team">
+		<div class="container">
+			<div class="row">
+				<h2>MEET OUR TEAM</h2>
+				<p>Praesentium voluptatum delenti atque</p>
+			</div>
+
+			<div class="row">
+				<div class="one-team-member col-xs-12 col-md-4">
+					<div id="man1" class="member-avatar">
+					</div>
+					<h4>Erick Stern</h4>
+					<p>Acount Manager</p>
+					<div class="social-media-icons">
+						<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					</div>
+				</div>
+
+                <div class="one-team-member col-xs-12 col-md-4">
+					<div id="man2" class="member-avatar">
+					</div>
+					<h4>Martin Muller</h4>
+					<p>Developer</p>
+					<div class="social-media-icons">
+						<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					</div>
+				</div>
+
+                <div class="one-team-member col-xs-12 col-md-4">
+					<div id="woman1" class="member-avatar">
+					</div>
+					<h4>Anna Smith</h4>
+					<p>Project Manager</p>
+					<div class="social-media-icons">
+						<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.</p>
+			</div>
+		</div>
+
+	</section>
+
+    
+<!-- Section Contact -->
+    
+<section id="contact">
+    <div class="container">
+        
+         <div class="row">
+            <div id="contact-content">
+               <h3>CONTACT US</h3>
+               <p>Presentium voluptatum deleniti ataque.</p>
+            </div>   
+          </div>
+          
+        <div class="row">
+				<div id="contact-form" class='col-md-6 col-xs-12'>
+
+					<form action="https://formspree.io/an.sieradzka@gmail.com"
+                    method="POST">
+						<input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="YOUR NAME *">
+						</br>
+						<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="YOUR EMAIL *">
+						</br>
+						<input type="phone" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="YOUR PHONE *">
+					</form>
+
+				</div>
+				
+				<div class="col-md-6">
+					<textarea maxlength="1000" class="form-control" name="message" id="text_area" placeholder="YOUR MESSAGE *" rows="9"></textarea>
+				</div>          
+        </div>
+        
+        <div class="row">
+           	<div id="send-button" class='col-md-12'>
+            <input id="button" type="submit" class="btn btn-default" id="wyslij" value="Send message">
+            </div>
+        </div>
+          
+   </div>
+</section>
+
+<!-- Section footer --> 
+          
+<footer id="stopka">
+    <div class="container">
+        <div class="row">
+          
+           <div id="tresc" class="col-xs-12 col-md-4">
+                Copyright &copy; Anna Sieradzka
+           </div>
+            
+            <div class="social-media-icons tresc col-md-4">
+                <a href ="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href ="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href ="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                
+            </div>
+            
+            <div id="policy" class="col-xs-12 col-md-4">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of use</a>
+            </div>
+            
+            
+        </div>
+     </div>
+</footer>
+        
+<!--  PLIKI COOKIES  -->
+       
+<section id="cookie-warn">
+    <p><strong>UWAGA!</strong> Niniejsza strona wykorzystuje pliki cookies. Pozostając na stronie godzisz się na 
+    ich zapisywanie w Twojej przeglądarce. 
+    <a href="javascript:void(0);" id="close-cookie-warn"
+    >Zamknij</a></p>
+</section>
+        
+<!--    Skrypt jQuery -->
+<script src="js/jquery-3.1.1.min.js"></script>
+
+<!--
+ SCROLL REVEAL 
+<script src="js/scrollreveal-master/dist/scrollreveal.js"></script>
+-->
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--
+ SCROLL Reveal 
+<script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+-->
+
+<!-- JS skrypt -->
+<script src="js/custom.js"></script>
+
 </body>
 </html>
