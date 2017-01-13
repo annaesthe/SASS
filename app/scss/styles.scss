@@ -1,16 +1,10 @@
 @import"mixin";
 @import"zmienne";
 
-/*
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto Slab', serif;
-    font-family: 'Droid Serif', serif;
-*/
 
 body {
-    font-family: 'Roboto Slab', serif;
-    color: #777777;
-    /*         background-color: greenyellow;*/
+    @include fontRoboto;
+    @include colorBody;
 }
 
 .font-Italic {

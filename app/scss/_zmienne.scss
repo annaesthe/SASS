@@ -1,6 +1,20 @@
 
-/*pierwotny kolor motywu  #0ed8d6*/
-$colorMotywu:  #0ed8d6;
+// FONTY
 
-/* kolor maski na portfoliach*/
-$colorMaskaPortfolioHover: rgba(14, 216, 214, 0.5);
+$fontRoboto: 'Roboto Slab', serif;
+$fontDroid: 'Droid Serif', serif;
+$fontMonserrat: 'Montserrat', sans-serif;
+
+
+// KOLORY
+
+
+$blueHover: #0ed8d6; //colorMotywu
+$colorBody: #333333;
+$hoverGrey: lightslategrey;
+
+
+// MASK PORTOFLIO HOVER
+
+$maskPortfolio: rgba(14, 216, 214, 0.5);
+
